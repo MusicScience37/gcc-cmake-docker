@@ -15,7 +15,8 @@ WORKDIR /usr/local/lcov
 RUN wget -nv https://github.com/linux-test-project/lcov/releases/download/v1.14/lcov-1.14.tar.gz && \
     tar xf lcov-1.14.tar.gz && \
     make -C lcov-1.14 install && \
-    rm -r lcov-1.14 lcov-1.14.tar.gz
+    rm -r lcov-1.14 lcov-1.14.tar.gz && \
+    ln -s "$(command -v gcov-8)" /usr/local/bin/gcov
 
 WORKDIR /usr/local/cmake
 RUN wget -nv https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5-Linux-x86_64.tar.gz && \
