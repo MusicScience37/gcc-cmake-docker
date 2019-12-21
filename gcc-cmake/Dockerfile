@@ -1,4 +1,4 @@
-FROM musicscience37/gcc-ubuntu:version-1.0
+FROM musicscience37/gcc-ubuntu:version-1.1
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -15,11 +15,10 @@ WORKDIR /usr/local/lcov
 RUN wget -nv https://github.com/linux-test-project/lcov/releases/download/v1.14/lcov-1.14.tar.gz && \
     tar xf lcov-1.14.tar.gz && \
     make -C lcov-1.14 install && \
-    rm -r lcov-1.14 lcov-1.14.tar.gz && \
-    ln -s "$(command -v gcov-8)" /usr/local/bin/gcov
+    rm -r lcov-1.14 lcov-1.14.tar.gz
 
 WORKDIR /usr/local/cmake
-RUN wget -nv https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5-Linux-x86_64.tar.gz && \
-    tar xf cmake-3.15.5-Linux-x86_64.tar.gz && \
-    rm cmake-3.15.5-Linux-x86_64.tar.gz
-ENV PATH=/usr/local/cmake/cmake-3.15.5-Linux-x86_64/bin:$PATH
+RUN wget -nv https://github.com/Kitware/CMake/releases/download/v3.16.2/cmake-3.16.2-Linux-x86_64.tar.gz && \
+    tar xf cmake-3.16.2-Linux-x86_64.tar.gz && \
+    rm cmake-3.16.2-Linux-x86_64.tar.gz
+ENV PATH=/usr/local/cmake/cmake-3.16.2-Linux-x86_64/bin:$PATH

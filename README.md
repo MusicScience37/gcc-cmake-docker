@@ -17,7 +17,7 @@ Current versions of softwares:
 | :------------------------------------------------- | :------ | :------------- |
 | [gcc](https://gcc.gnu.org/)                        | 8.3.0   | gcc, g++, gcov |
 | [lcov](https://github.com/linux-test-project/lcov) | 1.14    |                |
-| [CMake](https://cmake.org/)                        | 3.15.5  |                |
+| [CMake](https://cmake.org/)                        | 3.16.2  |                |
 
 ## Images
 
