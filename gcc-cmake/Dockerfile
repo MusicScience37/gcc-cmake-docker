@@ -18,7 +18,7 @@ RUN wget -nv https://github.com/linux-test-project/lcov/releases/download/v1.14/
     rm -r lcov-1.14 lcov-1.14.tar.gz
 
 WORKDIR /usr/local/cmake
-RUN wget -nv https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5-Linux-x86_64.tar.gz && \
-    tar xf cmake-3.15.5-Linux-x86_64.tar.gz && \
-    rm cmake-3.15.5-Linux-x86_64.tar.gz
-ENV PATH=/usr/local/cmake/cmake-3.15.5-Linux-x86_64/bin:$PATH
+RUN wget -nv https://github.com/Kitware/CMake/releases/download/v3.16.2/cmake-3.16.2-Linux-x86_64.tar.gz && \
+    tar xf cmake-3.16.2-Linux-x86_64.tar.gz && \
+    rm cmake-3.16.2-Linux-x86_64.tar.gz
+ENV PATH=/usr/local/cmake/cmake-3.16.2-Linux-x86_64/bin:$PATH
