@@ -1,12 +1,12 @@
-FROM musicscience37/gcc-ubuntu:version-1.1
+FROM musicscience37/gcc-ubuntu:version-1.2
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        ca-certificates=20180409 \
-        perl=5.26.1-6ubuntu0.3 \
-        wget=1.19.4-1ubuntu2.2 && \
+        ca-certificates=20190110 \
+        perl=5.28.1-6build1 \
+        wget=1.20.3-1ubuntu1 && \
     apt-get autoremove && \
     apt-get autoclean && \
     rm -r /var/lib/apt/lists/*
